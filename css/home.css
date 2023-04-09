@@ -1,0 +1,244 @@
+body{
+    font-family: Verdana, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* font-size: 100%; */
+    /* vertical-align: baseline; */
+    /* border: 0; */
+    width: 100%;
+}
+
+footer{
+    background-color: #2E475D;
+}
+
+.categoryHome{
+    /* max-width: 100%; */
+    margin: 0 auto;
+    padding: 0.2em;
+    box-sizing: border-box;
+    background-color: #2E475D;
+    background: linear-gradient(#395783, #2E475D);
+}
+
+.categoryHome h3{
+    color:white;
+    padding-left: 1em;
+}
+.feed {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    /* padding: 0.5em; */
+    box-sizing: border-box;
+    background-color: #2E475D;
+    
+    color: black;
+    padding: 1em;
+    z-index: 0;
+}
+
+.feedPosts {
+    /* flex: 3; */
+    padding-right: 1em;
+
+    margin: 0.5em;
+    border-right: 2px solid #B7ECEC;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.post {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border: 2px solid #FF5C35;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+}
+
+.post h2 {
+    font-size: 1.5em;
+}
+
+.post p {
+    font-size: 1.2em;
+}
+
+.post .metaData {
+    margin-top: 10px;
+    font-size: 1em;
+    color: black;
+    text-align: right;
+}
+
+a:link { 
+    text-decoration: none; 
+    color: #FF5C35;
+}
+
+
+a:visited { 
+    text-decoration: none; 
+    color: #FF5C35;
+}
+
+
+a:hover {
+    text-decoration: none; 
+    color: #FF5C35;
+}
+
+
+a:active {
+    text-decoration: none; 
+    color: #FF5C35;
+}
+
+.homeReview{
+    margin:5px;
+    margin-top:-35px;
+    color:white;
+    /* padding:0; */
+}
+
+#adminPage, #account, #createPost, #logOut, #logIn, #commentHistory, #likedPosts, #controversialPosts {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    color: white;
+    
+    cursor: pointer;
+    width: 100%;
+    margin: 0 0.5em 0.5em 0.5em;
+    /* margin-top: 0.5em; */
+    font-weight: bold;
+    display: block;
+    border: 1px solid #FF5C35;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#account::before, #adminPage::before, #logOut::before, #createPost::before, #logIn::before, #commentHistory::before, #likedPosts::before, #controversialPosts::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  #account:hover::before, #adminPage:hover::before, #logOut:hover::before, #createPost:hover::before, #logIn:hover::before, #commentHistory:hover::before, #likedPosts:hover::before, #controversialPosts:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  #account::before, #adminPage::before, #logOut::before, #createPost::before, #logIn::before, #commentHistory::before, #likedPosts::before, #controversialPosts::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 100%, 80%);
+    
+    z-index: -1;
+    transition: .3s ease;
+  }
+  
+ #account, #adminPage, #logOut, #createPost, #logIn, #commentHistory, #likedPosts, #controversialPosts {
+    position: relative;
+    /* font-size: 5rem; */
+  }
+  
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  
+  html {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    /* place-content: center; */
+    font-family: system-ui, sans-serif;
+  }
+  
+  @media (orientation: landscape) {
+    body{
+      grid-auto-flow: column;
+    }
+  }
+#post-container{
+    position:relative; 
+    float: left; 
+    width:70%; 
+    height:100%;
+}
+.sidebar{
+    z-index: 0;
+    float:right;
+    /* position:absolute; */
+    /* position:relative; */
+    top:0;
+    /* right:-20%; */
+    /* width:30%; */
+    /* height:100%; */
+}
+@media only screen and (max-width: 768px) {
+    #post-container{
+      width: 100%;
+      float: none;
+    }
+  
+    .sidebar {
+      width: 100%;
+      float: none;
+    }
+  }
+#searchbar {
+    color: white;
+    padding: 1em;
+    /* padding-top:1em;
+    padding-bottom:1em; */
+    margin-top:1em;
+    margin: auto;
+    margin-right:1em;
+    align-items:right;
+    width:100%;
+    max-width:300px;
+    display:inline-flex;
+    /* justify-content: right; */
+}
+#query{
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #2E475D;
+    border-radius: 5px 0 0 5px;
+    background: 1px solid #ebf6ff;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+#query:focus{
+    background:white;
+    box-shadow: 0 0 2px #678196;
+}
+
+#query::placeholder{
+    color: #678196;
+}
+
+.searchbarButton{
+    width:40px;
+    background:#2E475D;
+    background: linear-gradient(#395783, #2E475D);
+    color: white;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    cursor:pointer;
+    user-select:none;
+}
+
+.searchbarButton:active, #account:active, #adminPage:active, #logOut:active, #createPost:active, #logIn:active, #commentHistory:active, #likedPosts:active, #controversialPosts:active {
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.25);
+}
+header {
+    margin: auto;
+}

@@ -1,0 +1,28 @@
+.headerContainer {
+    display:flex;
+    align-items:center;
+}
+.headerContainer img{
+    margin-right: 1px;
+    margin-top:1em;
+    border-right: 2px solid black;
+    vertical-align:middle;
+    height:100px;
+}
+.headerContainer h1{
+    margin: 0;
+    /* margin-left:-5em; */
+    font-size:1.3em;
+}
+
+header{
+    /* background-color:lightgrey; */
+    clear:right;
+    /* display:flex; */
+}
+
+body{
+    background-color:white;
+    margin: 0;
+    padding: 0;
+}

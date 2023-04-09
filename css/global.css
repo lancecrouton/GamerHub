@@ -1,0 +1,1348 @@
+html {
+    block-size: 100%;
+    inline-size: 100%; 
+    font-family: Verdana, Helvetica, sans-serif;
+  
+}
+
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: white;
+    /* font-size: large; */
+}
+
+.managePostsTitle{
+    text-align:center;
+    background-color: #2E475D;
+    background: linear-gradient(#395783, #2E475D);
+    color: white;
+    padding: 1em;
+    max-width: 500px;
+    margin: auto;
+    /* text-align: center; */
+}
+a:link {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+a:active {
+    text-decoration: none;
+    color: red;
+}
+
+.commentBody, .postBody{
+  background-color: #2E475D;
+  background: linear-gradient(#395783, #2E475D);
+  color: white;
+  margin: auto;
+  padding: 2em;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+}
+#createPostText{
+  font-weight:bold;
+}
+.managePostBody{
+  background-color: #2E475D;
+  background: linear-gradient(#395783, #2E475D);
+}
+.accountSettingsBox, .accountUpdateBox {
+    background-color: #2E475D;
+    background: linear-gradient(#395783, #2E475D);
+    color: white;
+    margin: auto;
+    padding: 2em;
+    max-width: 500px;
+    z-index: 0;
+}
+
+.profile, .managePostBox, .disableUserBox, .categoryBody{
+  background-color: #2E475D;
+  background: linear-gradient(#395783, #2E475D);
+  color: white;
+  margin: auto;
+  padding: 2em;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+}
+img,#userImage {
+    align-items: right;
+    max-width: 500px;
+    max-height: 100%;
+}
+#account{
+
+  
+  background-color: #2E475D;
+  background: linear-gradient(#395783, #2E475D);
+  padding: 1em;
+  z-index: 0;
+  color: white;
+  
+  cursor: pointer;
+  /* width: 100%; */
+  margin: 0.5em;
+  margin-left: 1000px auto;
+  font-weight: bold;
+  display: block;
+  text-align:right;
+  border: 1px solid #FF5C35;
+  /* float:right; */
+  top:0;
+  right:0;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: hsl(200, 100%, 80%, 0);
+    color: white;
+    cursor: pointer;
+    border: 2px solid #FF5C35;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    z-index: 0;
+}
+
+
+#backButton {
+    padding: 1em;
+    background-color: #2E475D;
+
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    float: right;
+    position: relative;
+}
+
+#account::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+#account:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#account::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background-color: hsl(200, 100%, 80%);
+  
+  z-index: -1;
+  transition: .3s ease;
+}
+
+#account {
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+
+
+a:link {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+a:active {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+#searchUsers {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#disableUsers {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#categoryStatistics {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#userStatistics {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#postStatistics, #trendingStatistics {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#createCategory {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#usageStatistics {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#managePosts {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+.adminPageBox {
+    background-color: #2E475D;
+    background: linear-gradient(#395783, #2E475D);
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+#disableUsers::before,
+#searchUsers::before,
+#managePosts::before,
+#createCategory::before,
+#usageStatistics::before,
+#categoryStatistics::before,
+#userStatistics::before,
+#postStatistics::before,
+#trendingStatistics::before
+{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+#disableUsers:hover::before,
+#searchUsers:hover::before,
+#managePosts:hover::before, 
+#createCategory:hover:before,
+#usageStatistics:hover:before,
+#categoryStatistics:hover:before,
+#userStatistics:hover:before,
+#postStatistics:hover:before,
+#trendingStatistics::before
+{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#disableUsers::before,
+#searchUsers::before,
+#managePosts::before,
+#createCategory::before,
+#usageStatistics::before,
+#categoryStatistics::before,
+#userStatistics::before,
+#postStatistics::before,
+#trendingStatistics::before
+{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 56%, 67%);
+
+    z-index: -1;
+    transition: .3s ease;
+}
+
+#disableUsers,
+#searchUsers,
+#managePosts,
+#createCategory,
+#usageStatistics,
+#categoryStatistics,
+#userStatistics,
+#postStatistics,
+#trendingStatistics
+{
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+
+.changePasswordBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+input[type="password"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: hsl(200, 56%, 67%, 100);
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    z-index: 0;
+}
+
+button[type="submit"]::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+button[type="submit"]:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+button[type="submit"]::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 56%, 67%);
+
+    z-index: -1;
+    transition: .3s ease;
+}
+
+button[type="submit"] {
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+
+
+
+.accountCreationBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+
+div>h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #2E475D;
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    z-index: 0;
+}
+
+button[type="submit"]::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+button[type="submit"]:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+button[type="submit"]::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 56%, 67%);
+
+    z-index: -1;
+    transition: .3s ease;
+}
+
+button[type="submit"] {
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+.loginBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.additionalOptions {
+    text-align: center;
+}
+
+.feedPosts {
+    flex: 3;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin: 0.5em;
+    border-right: 2px solid white;
+    padding: 2em;
+    background-color: #2E475D;
+}
+
+.post {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border: 2px solid #FF5C35;
+    /* background: white; */
+    color: white;
+    background-color:#2E475D
+}
+/* .post img{
+    padding:1em;
+    width: 200px;
+    height:auto;
+    margin-bottom:10px;
+} */
+.post h2 {
+    font-size: 1.5em;
+}
+
+.post p {
+    font-size: 1.2em;
+}
+
+.post .metaData {
+    margin-top: 10px;
+    font-size: 1em;
+    color: black;
+    text-align: right;
+}
+
+#commentButton {
+    padding: 1em;
+    background-color: #2E475D;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    float: left;
+}
+
+
+
+.passwordBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+/* h1,
+p {
+    text-align: center;
+} */
+
+
+
+
+
+
+.searchUsersBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+
+
+a:hover {
+    color: red;
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%; 
+    font-family: Verdana, Helvetica, sans-serif;
+  
+}
+
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: white;
+    /* font-size: large; */
+}
+
+.managePostsTitle{
+    text-align:center;
+    background-color: #2E475D;
+    border-radius: 5px;
+    color: white;
+    padding: 1em;
+    max-width: 500px;
+    margin: auto;
+    /* text-align: center; */
+}
+a:link {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+a:active {
+    text-decoration: none;
+    color: red;
+}
+
+.commentBody, .postBody, .statBody{
+  background-color: #2E475D;
+  border-radius: 5px;
+  color: white;
+  margin: auto;
+  padding: 2em;
+  max-width: 500px;
+  text-align: center;
+}
+#createPostText{
+  font-weight:bold;
+}
+.managePostBody{
+  background-color: #2E475D;
+}
+.accountSettingsBox, .accountUpdateBox {
+    background-color: #2E475D;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    margin: auto;
+    padding: 2em;
+    max-width: 500px;
+    z-index: 0;
+}
+
+.profile, .managePostBox, .disableUserBox{
+  background-color: #2E475D;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  margin: auto;
+  padding: 2em;
+  max-width: 500px;
+  text-align: center;
+}
+img,#userImage {
+    align-items: right;
+    max-width: 500px;
+    max-height: 100%;
+}
+#account{
+
+  
+  background-color: #2E475D;
+  padding: 1em;
+  z-index: 0;
+  color: white;
+  
+  cursor: pointer;
+  /* width: 100%; */
+  margin: 0.5em;
+  margin-left: 1000px auto;
+  font-weight: bold;
+  display: block;
+  text-align:right;
+  border: 1px solid #FF5C35;
+  /* float:right; */
+  top:0;
+  right:0;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: hsl(200, 100%, 80%, 0);
+    color: white;
+    cursor: pointer;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+    z-index: 0;
+}
+
+
+#backButton {
+    padding: 1em;
+    background-color: #2E475D;
+    border-radius: 5px 5px;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    float: right;
+    position: relative;
+}
+
+#account::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+#account:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#account::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background-color: hsl(200, 100%, 80%);
+  
+  z-index: -1;
+  transition: .3s ease;
+}
+
+#account {
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+
+
+a:link {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: #FF5C35;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+a:active {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+#searchUsers {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#disableUsers {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+#managePosts {
+    padding: 1em;
+    /* background-color: #1720c7; */
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    z-index: 0;
+}
+
+.adminPageBox {
+    background-color: #2E475D;
+    border-radius: 5px;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+#disableUsers::before,
+#searchUsers::before,
+#managePosts::before,
+#createCategory::before,
+#usageStatistics::before,
+#userStatistics::before,
+#postStatistics::before,
+#trendingStatistics::before
+{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+#disableUsers:hover::before,
+#searchUsers:hover::before,
+#managePosts:hover::before,
+#createCategory:hover:before,
+#usageStatistics:hover:before,
+#userStatistics:hover:before,
+#postStatistics:hover:before,
+#trendingStatistics:hover:before
+{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#disableUsers::before,
+#searchUsers::before,
+#managePosts::before, 
+#createCategory::before,
+#usageStatistics::before,
+#userStatistics::before,
+#postStatistics::before,
+#trendingStatistics::before
+{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 56%, 67%);
+
+    z-index: -1;
+    transition: .3s ease;
+}
+
+#disableUsers,
+#searchUsers,
+#managePosts,
+#createCategory,
+#usageStatistics,
+#userStatistics,
+#postStatistics,
+#trendingStatistics
+{
+    position: relative;
+    border-radius: 5px;
+    /* font-size: 5rem; */
+}
+
+
+
+.changePasswordBox {
+    background-color: #2E475D;
+    border-radius: 5px;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+input[type="password"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: hsl(200, 56%, 67%, 100);
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    z-index: 0;
+}
+
+button[type="submit"]::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+button[type="submit"]:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+button[type="submit"]::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 56%, 67%);
+
+    z-index: -1;
+    transition: .3s ease;
+}
+
+button[type="submit"] {
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+
+
+
+.accountCreationBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+
+div>h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #2E475D;
+    border: 2px solid #FF5C35;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    z-index: 0;
+}
+
+button[type="submit"]::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+button[type="submit"]:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+button[type="submit"]::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: hsl(200, 56%, 67%);
+
+    z-index: -1;
+    transition: .3s ease;
+}
+
+button[type="submit"] {
+    position: relative;
+    /* font-size: 5rem; */
+}
+
+
+.loginBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 2px solid #FF5C35;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.additionalOptions {
+    text-align: center;
+}
+
+.feedPosts {
+    flex: 3;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin: 0.5em;
+    border-right: 2px solid white;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2em;
+    background-color: #2E475D;
+}
+
+.post {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border: 2px solid #FF5C35;
+    /* background: white; */
+    color: white;
+    background-color:#2E475D;
+    border-radius: 5px 5px 5px 5px;
+}
+/* .post img{
+    padding:1em;
+    width: 200px;
+    height:auto;
+    margin-bottom:10px;
+} */
+.post h2 {
+    font-size: 1.5em;
+}
+
+.post p {
+    font-size: 1.2em;
+}
+
+.post .metaData {
+    margin-top: 10px;
+    font-size: 1em;
+    color: black;
+    text-align: right;
+}
+
+#commentButton {
+    padding: 1em;
+    background-color: #2E475D;
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+    font-weight: bold;
+    display: block;
+    float: left;
+}
+
+
+
+.passwordBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+/* h1,
+p {
+    text-align: center;
+} */
+
+
+
+
+
+
+.searchUsersBox {
+    background-color: #2E475D;
+    color: white;
+    margin: 10% auto;
+    padding: 2em;
+    max-width: 500px;
+}
+
+
+
+
+a:hover {
+    color: red;
+}
+
+.likeButton .heartIcon{
+    margin-left:-30px;
+    /* margin-top:30px; */
+    height:70px;
+    width:70px;
+    background: url("../images/heart.png");
+    background-position: left;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    cursor:pointer;
+
+}
+.likeButton .heartBg{
+    margin-top:20px;
+    background: rgba(255,192,200,0);
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: all 100ms ease;
+}
+
+.likeButton .heartBg:hover{
+    background: rgba(255,192,200,0.7);
+}
+.likeAmount{
+    margin-top:20px;
+    margin-left:5px;
+}
+.likeButton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.likeButton .heartIcon.liked {
+    animation: likeAnim 0.7s steps(28) forwards;
+}
+
+@keyframes likeAnim{
+    to{
+        background-position: right;
+        margin-left:30px;
+    }
+}
+/* will fix this in the future -Lance
+#replyButton{
+    float:left;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+} */
+
+input[type="checkbox"]:checked + .replies {
+    display: block;
+  }
+
+  *:focus {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
+
+#passwordHelp {
+    display: block;
+    text-align: center;
+  }
+
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+
+  .likeButton .heartIcon{
+    margin-left:-30px;
+    /* margin-top:30px; */
+    height:70px;
+    width:70px;
+    background: url("../images/heart.png");
+    background-position: left;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    cursor:pointer;
+
+}
+.likeButton .heartBg{
+    margin-top:20px;
+    background: rgba(255,192,200,0);
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    display:flex;
+    align-items:left;
+    justify-content:left;
+    transition: all 100ms ease;
+}
+
+.likeButton .heartBg:hover, .likeAmount .heartBg:hover{
+    background: rgba(255,192,200,0.7);
+}
+.likeAmount{
+    margin-top:20px;
+    margin-left:5px;
+    float:right;
+    align-items:right;
+    display:flex;
+    justify-content:right;
+}
+.likeButton{
+    display:flex;
+    align-items:left;
+    justify-content:left;
+    
+}
+
+.likeButton .heartIcon.clicked {
+    animation: likeAnim 0.7s steps(28) forwards;
+}
+
+@keyframes likeAnim{
+    to{
+        background-position: right;
+        margin-left:30px;
+    }
+}
+
+.viewReply{
+    color:lightcoral;
+}

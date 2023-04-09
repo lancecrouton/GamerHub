@@ -1,0 +1,47 @@
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class CreateAccountTest extends TestCase
+{
+    private $db;
+    private $email;
+    private $username;
+    private $password;
+
+    protected function setUp(): void
+    {
+        $host = 'localhost'; 
+        $user = 'gamerhubdatabase'; 
+        $pass = 'gamerhubdatabase'; 
+        $db = 'gamerhubdatabase'; 
+
+        $this->db = new mysqli($host, $user, $pass, $db);
+       
+        $this->email = "test@example.com";
+        $this->username = "test_user";
+        $this->password = md5("test_password");
+    }
+
+    protected function tearDown(): void
+    {
+        $this->db->close();
+    }
+
+    public function testUserCreateAccount()
+    {
+        $sql = "INSERT INTO accounts (email, username, password, img , isAdmin, isDisabled) VALUES ('{$this->email}', '{$this->username}', '{$this->password}' , 'null' , '1', '0')";
+        $this->db->query($sql);
+
+        $sql = "SELECT * FROM accounts WHERE email = '{$this->email}' AND username = '{$this->username}'";
+        $result = $this->db->query($sql);
+        $this->assertEquals(1, $result->num_rows);
+
+        $sql = "SELECT * FROM accounts WHERE username = '{$this->username}' OR email = '{$this->email}'";
+        $result = $this->db->query($sql);
+        $this->assertGreaterThanOrEqual(1, $result->num_rows);
+
+        $sql = "DELETE FROM accounts WHERE email = '{$this->email}' AND username = '{$this->username}'";
+        $this->db->query($sql);
+    }
+}
